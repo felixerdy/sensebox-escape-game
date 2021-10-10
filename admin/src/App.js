@@ -1,35 +1,57 @@
 import "./App.css";
-import { useEffect, useState } from "react";
+import { useEffect, useState, createContext } from "react";
 
 import { ArwesThemeProvider, StylesBaseline } from "@arwes/core";
-import { Animator } from "@arwes/animation";
+import { Animator, AnimatorGeneralProvider } from "@arwes/animation";
 import { Loader } from "./components/Loader";
-import Konami from "./components/Konami";
+import MainScreen from "./components/MainScreen";
+
+export const AppContext = createContext();
 
 function App() {
   const FONT_FAMILY_ROOT = '"Titillium Web", sans-serif';
   const FONT_FAMILY_CODE = '"Source Code Pro", monospace';
 
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
+  const [isDestroyed, setIsDestroyed] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
-      // setLoading(false);
-    }, 10000);
+      setLoading(false);
+    }, 8000);
   });
 
   return (
-    <div class="app">
+    <div className="app">
       <ArwesThemeProvider>
-        <StylesBaseline
-          styles={{
-            "html, body": { fontFamily: FONT_FAMILY_ROOT },
-            "code, pre": { fontFamily: FONT_FAMILY_CODE },
+        <AnimatorGeneralProvider
+          animator={{
+            duration: { enter: 200, exit: 200 },
           }}
-        />
-        <Animator animator={{ animate: true }}>
-          {loading ? <Loader /> : <Konami />}
-        </Animator>
+        >
+          <StylesBaseline
+            styles={{
+              "html, body": { fontFamily: FONT_FAMILY_ROOT },
+              "code, pre": { fontFamily: FONT_FAMILY_CODE },
+            }}
+          />
+          <Animator
+            animator={{
+              manager: "stagger",
+              combine: true,
+              duration: { stagger: 100 },
+            }}
+          >
+            <AppContext.Provider
+              value={{
+                isDestroyed,
+                setIsDestroyed,
+              }}
+            >
+              {isDestroyed ? <Loader /> : loading ? <Loader /> : <MainScreen />}
+            </AppContext.Provider>
+          </Animator>
+        </AnimatorGeneralProvider>
       </ArwesThemeProvider>
     </div>
   );

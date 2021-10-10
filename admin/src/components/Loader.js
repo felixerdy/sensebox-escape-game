@@ -16,7 +16,7 @@ export const Loader = () => {
 
   const [loadingTextIndex, setLoadingTextIndex] = React.useState(0);
 
-  const loadingTime = 10000;
+  const loadingTime = 6000;
 
   React.useEffect(() => {
     const timeout = setTimeout(() => {
