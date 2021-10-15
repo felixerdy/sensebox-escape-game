@@ -24,6 +24,10 @@ class MessageParser {
       this.actionProvider.absenderinformationen();
     }
 
+    if (lowerCaseMessage.includes("help")) {
+      this.actionProvider.konamiHelp();
+    }
+
     if (lowerCaseMessage.includes(this.SUPERSECRETPASSWORD)) {
       this.actionProvider.showNote();
     }

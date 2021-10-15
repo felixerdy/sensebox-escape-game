@@ -1,0 +1,60 @@
+/*contains css for all pictures*/
+
+.team-pic,
+.press-pic,
+.award-pic
+ {
+  //float: left;
+  margin: 2px;
+  margin-right: 15px;
+  max-width: 100%;
+}
+.footer-icon{
+  padding-right: 2px;
+}
+
+.partner-pic{
+  max-height: 100px;
+}
+
+.masthead-small-pic{
+  
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) { 
+    height: 100%;
+    width: auto; 
+  }
+  @media (max-width: 992px) { 
+    height: auto;
+    width: 100%; 
+  }
+}
+
+.masthead-pic {
+  
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) { 
+    height: 80%;
+    max-height: 400px;
+    width: auto; 
+  }
+  @media (max-width: 992px) { 
+    height: auto;
+    width: 80%; 
+    max-width: 400px;
+  }
+}
+
+.header-bg {
+  /* This stretches the canvas across the entire hero unit */
+  //position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  border-bottom: 1px #fff solid;
+  /* This positions the canvas under the text */
+  z-index: 1;
+}

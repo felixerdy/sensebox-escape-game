@@ -1,0 +1,34 @@
+#
+about-us-name: "About us"
+about-us-link: /about-us.html
+network-name: "Network"
+network-link: /network.html
+press-link: /press.html
+press-name: Press and media
+press-kit-link: /pressekit.html
+press-kit-name: Press Kit
+
+#
+docs-name: "Documentation"
+docs-link: https://docs.sensebox.de
+projects-name: "Projects"
+projects-link: /projects.html
+
+#
+resources-docs: "Documentation"
+resources-projects: "Projects"
+resources-teaching: "Learning Materials"
+
+#
+resources: Resources
+follow-us: Follow us
+background: Background
+
+#
+imprint-name: "Imprint"
+imprint-link: /imprint.html
+privacy-name: "Privacy"
+privacy-link: /privacy.html
+contact-name: "Contact"
+contact-link: /contact.html
+

@@ -1,0 +1,182 @@
+{% assign content = site.data.i18n.[page.lang].products-home %}
+<div class="container">
+    <div class="row row-padding">
+        <div class="col-lg-8 middle">
+            <h2 class="featurette-heading">senseBox:home</h2>
+            <p class="lead">{{content.home-text}}</p>
+            <br>
+            <p class="lead">Die senseBox:home bietet:
+
+            <ul>
+                {{content.home-list}}
+            </ul>
+            </p>
+        </div>
+        <div class="col-lg-4 middle">
+            <img loading="lazy" class="img-fluid mx-auto" src="/images/products/home/home-big.png" alt="Generic placeholder image">
+        </div>
+    </div>
+</div>
+
+<hr class="featurette-divider">
+
+<div class="container">
+    <div class="row row-padding featurette">
+        <div class="col-md-4 middle">
+            <img loading="lazy" class="featurette-image img-fluid mx-auto" src="/images/products/home/sensoren.jpg"
+                alt="Generic placeholder image">
+        </div>
+        <div class="col-md-8 text-left middle">
+            <h2 class="featurette-heading">{{content.home-phenomenon-title}}</h2>
+            <p class="lead">{{content.home-phenomenon-text}}</p>
+        </div>
+        <div class="phenos">
+            <div class="sb-pheno">
+                <div class="icon"><span class="fa-stack fa-2x">
+                    <i class="fas fa-circle fa-stack-2x" style="color: whitesmoke"></i>
+                    <i class="fas fa-temperature-high fa-stack-1x fa-inverse" style="color:#3fbdeb;"></i>
+                </div>
+                </span><span>{{content.phenomenon-temperatur}}</span>
+            </div>
+            <div class="sb-pheno">
+
+                <div class="icon"><span class="fa-stack fa-2x">
+                    <i class="fas fa-circle fa-stack-2x" style="color: whitesmoke"></i>
+                    <i class="fas fa-tachometer-alt fa-stack-1x fa-inverse" style="color:#3fbdeb;"></i>
+                </span>
+                </div>
+                 <span>{{content.phenomenon-pressure}}</span>
+            </div>
+            <div class="sb-pheno">
+                <div class="icon">
+                    <span class="fa-stack fa-2x">
+                        <i class="fas fa-circle fa-stack-2x" style="color: whitesmoke"></i>
+                        <i class="fas fa-percent fa-stack-1x fa-inverse" style="color:#3fbdeb;"></i>
+                    </span>
+                </div>
+                <span>{{content.phenomenon-humidity}}</span>
+            </div>
+            <div class="sb-pheno">
+                <div class="icon">
+
+                    <span class="fa-stack fa-2x">
+                        <i class="fas fa-circle fa-stack-2x" style="color: whitesmoke"></i>
+                        <i class="fas fa-sun fa-stack-1x fa-inverse" style="color:#3fbdeb"></i>
+                    </span>
+                </div>
+                <span>{{content.phenomenon-light}}</span>
+            </div>
+            <div class="sb-pheno">
+                <div class="icon">
+
+                    <span class="fa-stack fa-2x">
+                        <i class="fas fa-circle fa-stack-2x" style="color: whitesmoke"></i>
+                        <i class="fas fa-smog fa-stack-1x fa-inverse" style="color:#3fbdeb;"></i>
+                    </span>
+                </div>
+                <span>{{content.phenomenon-pm}}</span>
+            </div>
+            <div class="sb-pheno">
+                <div class="icon">
+
+                    <span class="fa-stack fa-2x">
+                        <i class="fas fa-circle fa-stack-2x" style="color: whitesmoke"></i>
+                        <i class="fas fa-cloud fa-stack-1x fa-inverse" style="color:#3fbdeb;"></i>
+                    </span>
+                </div>
+                <span>{{content.phenomenon-iaq}}</span>
+            </div>
+            <div class="sb-pheno">
+                <div class="icon">
+
+                    <span class="fa-stack fa-2x">
+                        <i class="fas fa-circle fa-stack-2x" style="color: whitesmoke"></i>
+                        <i class="fas fa-microphone fa-stack-1x fa-inverse" style="color:#3fbdeb;"></i>
+                    </span>
+                </div>
+                <span>{{content.phenomenon-sound}}</span>
+            </div>
+            <div class="sb-pheno">
+                <div class="icon">
+
+                    <span class="fa-stack fa-2x">
+                        <i class="fas fa-circle fa-stack-2x" style="color: whitesmoke"></i>
+                        <i class="fas fa-wind fa-stack-1x fa-inverse" style="color:#3fbdeb"></i>
+                    </span>
+                </div>
+                <span>{{content.phenomenon-windspeed}}</span>
+            </div>
+            <!-- <img loading="lazy" class="img-fluid mx-auto" src="{{content.home-phenomenon-image}}"
+                alt="Generic placeholder image"> -->
+
+        </div>
+    </div>
+</div>
+
+<div style="background-color: whitesmoke;">
+    <div class="container">
+        <div class="row row-padding featurette">
+            <div class="col-md-7 middle">
+                <h2 class="featurette-heading">{{content.home-transmission-title}}
+                </h2>
+                <p class="lead">{{content.home-transmission-text}}</p>
+                
+                <div class="row">
+                    <div class="sb-pheno sb-small-pheno">
+                        <div class="icon"><span class="fa-stack fa-2x">
+                            <i class="fas fa-circle fa-stack-2x" style="color: white"></i>
+                            <i class="fas fa-wifi fa-stack-1x fa-inverse" style="color:#3fbdeb;"></i>
+                        </span>
+                    </div>
+                    {{content.phenomenon-wifi}}
+                   </div>
+                   <div class="sb-pheno sb-small-pheno">
+                       <div class="icon"><span class="fa-stack fa-2x">
+                           <i class="fas fa-circle fa-stack-2x" style="color: white"></i>
+                           <i class="fas fa-ethernet fa-stack-1x fa-inverse" style="color:#3fbdeb;"></i>
+                       </span>
+                   </div>
+                   {{content.phenomenon-ethernet}}
+                   </div>
+                   <div class="sb-pheno sb-small-pheno">
+                       <div class="icon"><span class="fa-stack fa-2x">
+                           <i class="fas fa-circle fa-stack-2x" style="color: white"></i>
+                           <i class="fas fa-broadcast-tower fa-stack-1x fa-inverse" style="color:#3fbdeb;"></i>
+                       </span>
+                   </div>
+                   {{content.phenomenon-lora}}
+                   </div>
+                   <div class="sb-pheno sb-small-pheno">
+                       <div class="icon">
+                           <span class="fa-stack fa-2x">
+                                <i class="fas fa-circle fa-stack-2x" style="color: white"></i>
+                                <i class="fas fa-sd-card fa-stack-1x fa-inverse" style="color:#3fbdeb"></i>
+                            </span>
+                        </div>
+                   {{content.phenomenon-sd}}
+                   </div>
+               </div>
+                
+    
+            </div>
+            <div class="col-md-5 middle">
+                <img loading="lazy" class="featurette-image img-fluid mx-auto" src="/images/products/home/bees.png"
+                    alt="Generic placeholder image">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <div class="row row-padding featurette">
+        <div class="col-md-5 middle">
+            <img loading="lazy" class="featurette-image img-fluid mx-auto" src="/images/products/home/case.jpg"
+                alt="Generic placeholder image">
+        </div>
+        <div class="col-md-7 middle">
+            <h2 class="featurette-heading">{{content.home-housing-title}}</h2>
+            <p class="lead">{{content.home-housing-text}}</p>
+        </div>
+    </div>
+</div>

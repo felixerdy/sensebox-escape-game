@@ -1,0 +1,226 @@
+.navbar {
+  position: absolute;
+  left: 0;
+  @media (max-width: $breakpoint-laptop) {
+    right: 0;
+  }
+  padding: 0;
+  z-index: 1;
+
+  .nav-item {
+    @media (min-width: $breakpoint-laptop){
+      padding: 0 0.4em;
+    }
+
+  }
+}
+
+.navbar-brand {
+  padding-bottom: 1rem;
+
+  @media (min-width: $breakpoint-laptop) {
+    padding: 2rem;
+  }
+
+  clip-path: polygon(0 0, 100% 0, 86% 84%, 0 77%);
+  background-color: white;
+
+  > img {
+    min-width: 300px;
+    width: 100%;
+    height: 4.5rem;
+  }
+}
+
+.navbar-collapse {
+  z-index: 1;
+
+  @media (max-width: $breakpoint-laptop) {
+    background-color: white;
+    padding: 1rem;
+    -webkit-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.25);
+
+    > ul > li > a {
+      color: black !important;
+    }
+  }
+}
+
+.main-item {
+  color: white;
+}
+
+.navbar-right {
+  float: right !important;
+}
+
+.navbar-first {
+  padding-left: 40px;
+  font-size: smaller;
+  float: right;
+}
+
+.navbar-second {
+  padding-left: 40px;
+  font-family: BrixSlab-Bold;
+  font-size: larger;
+}
+
+.navbar-brand {
+  font-family: "BrixSlab-Regular";
+}
+
+.active {
+  > .nav-link {
+    color: $sensebox-green !important;
+  }
+}
+
+.heading {
+  font-size: 3.5rem;
+  @media (max-width: $breakpoint-laptop) {
+    font-size: 2.5rem;
+  }
+  color: white;
+}
+
+.subheading {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.frosted {
+  /* For Chrome & Chromium 76+ */
+  backdrop-filter: blur(200px);
+  /* For Safari, classic Edge and Chrome/Chromium <=75 */
+  -webkit-backdrop-filter: blur(200px);
+
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-radius: 1rem;
+  margin: 1rem;
+  flex: auto;
+}
+
+.navbar-frosted {
+  /* For Chrome & Chromium 76+ */
+  backdrop-filter: blur(150px);
+  /* For Safari, classic Edge and Chrome/Chromium <=75 */
+  -webkit-backdrop-filter: blur(150px);
+}
+.nav-banner {
+  position: absolute;
+  top: 56px;
+  width: 100%;
+  text-align: center;
+  background-color: $warning;
+  padding: 0.6rem;
+  z-index: 1;
+  animation: 1s ease-out 0s 1 slideInFromTop;
+}
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.megamenu {
+  position: static;
+}
+
+.megamenu .container {
+  display: table;
+}
+
+.megamenu .dropdown-menu {
+  background: none;
+  border: none;
+  width: 100%;
+
+  a {
+    color: $text-black;
+  }
+
+  li {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.navbar-polygon {
+  background-color: white;
+  @media (min-width: $breakpoint-laptop){
+    clip-path: polygon(0 0, 100% 0, 86% 93%, 0 88%);
+    padding-bottom: 4rem;
+    padding-top: 2rem;
+  }
+}
+
+.align-item-flex-end {
+  align-items: flex-end;
+}
+
+
+.dropdown-menu.show {
+  max-height: 530px;
+}
+
+.dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+  display: block !important;
+  transition: max-height 0.3s ease-out;
+}
+
+.nav-shop {
+  background-color: white;
+  border-radius: 50px;
+
+  > .nav-link {
+    color: $sensebox-green;
+
+    &:hover {
+      color: #0056b3;
+    }
+
+    svg {
+      margin-bottom: 4px;
+    }
+  }
+}
+
+.nav-lang {
+  margin-left: 10px;
+
+  @media (max-width: $breakpoint-laptop) {
+    margin: 0;
+  }
+
+  > .nav-link {
+    svg {
+      margin-bottom: 4px;
+      fill: white;
+      @media (max-width: $breakpoint-laptop) {
+        fill: black;
+      }
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    &:hover {
+      svg {
+        fill: #0056b3;
+      }
+    }
+  }
+}
+
+.navbar-polygon {
+
+}

@@ -1,0 +1,29 @@
+url: "https://sensebox.de" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+
+title: senseBox.de
+tagline: senseBox | Dein Toolkit für digitale Bildung, Citizen Science und Umwelt­monitoring
+twitter:
+  username: sensebox_de
+  card: summary
+
+plugins:
+    - jekyll-seo-tag
+
+sass:
+    sass_dir: css
+    style:    compressed
+
+# Build settings
+markdown: kramdown
+
+# Project Tags
+enableTags: true
+tagarray: []
+
+collections:
+    events:
+    press:
+    awards:
+    projects: 
+        output: true

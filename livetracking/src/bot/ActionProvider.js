@@ -42,6 +42,14 @@ class ActionProvider {
     this.updateChatbotState(messageTwo);
   };
 
+  konamiHelp = () => {
+    const message = this.createChatBotMessage(
+      "Der Weg ist das Spiel. Sagt dir der Konami Code etwas?"
+    );
+
+    this.updateChatbotState(message);
+  };
+
   askForPassword = () => {
     const message = this.createChatBotMessage(
       "Bitte geben Sie das Kennwort ein um die Notiz zu lesen"

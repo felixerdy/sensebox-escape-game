@@ -66,14 +66,14 @@ const MainScreen = () => {
           <div style={{ textAlign: "center" }}>
             <Text as="h2">4.723</Text>
             <br />
-            <Text>offene Bestellungen senseBox:edu</Text>
+            <Text>offene Bestellungen senseBox Weihnachtsedition</Text>
           </div>
         </FrameHexagon>
       </div>
       <hr />
 
       <div style={{ margin: "1rem" }}>
-        <Text as="h1">New Messages</Text>
+        <Text as="h1">Nachrichten</Text>
 
         <Card
           animator={{ activate: true }}
@@ -102,19 +102,19 @@ const MainScreen = () => {
         <div style={{ flex: "1 1 0px", margin: "1rem" }}>
           <Text as="h1">Blockly</Text>
           <Blockquote palette="success">
-            <Text>All Blockly systems running</Text>
+            <Text>Alle Blockly Systeme laufen</Text>
           </Blockquote>
           <Button
             animator={{ activate: true }}
             onClick={(event) => console.log(event)}
           >
-            <Text>Visit Blockly</Text>
+            <Text>Blockly öffnen</Text>
           </Button>
         </div>
         <div
           style={{ flex: "1 1 0px", width: 0, margin: "1rem", minWidth: 250 }}
         >
-          <Text as="h3">Last code</Text>
+          <Text as="h3">Letzter Sketch</Text>
 
           <CodeBlock
             animator={{ activate: true }}

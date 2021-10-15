@@ -2,8 +2,12 @@ import React from "react";
 
 import { LoadingBars, Text } from "@arwes/core";
 
+import { useHistory } from "react-router-dom";
+
 export const Loader = () => {
   const [progress, setProgress] = React.useState(0);
+  let history = useHistory();
+
   const duration = { enter: 1000, exit: 1000 };
 
   const loadingText = [
@@ -26,6 +30,10 @@ export const Loader = () => {
       const i = Math.floor(progress * (loadingText.length / 100));
       if (i < loadingText.length) {
         setLoadingTextIndex(i);
+      }
+      console.log(progress);
+      if (progress >= 100) {
+        window.location.href = "/main";
       }
     }, loadingTime / 100);
     return () => clearTimeout(timeout);

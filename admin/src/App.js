@@ -4,7 +4,9 @@ import { useEffect, useState, createContext } from "react";
 import { ArwesThemeProvider, StylesBaseline } from "@arwes/core";
 import { Animator, AnimatorGeneralProvider } from "@arwes/animation";
 import { Loader } from "./components/Loader";
+import { Destructure } from "./components/Destructure";
 import MainScreen from "./components/MainScreen";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export const AppContext = createContext();
 
@@ -12,21 +14,14 @@ function App() {
   const FONT_FAMILY_ROOT = '"Titillium Web", sans-serif';
   const FONT_FAMILY_CODE = '"Source Code Pro", monospace';
 
-  const [loading, setLoading] = useState(true);
   const [isDestroyed, setIsDestroyed] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setLoading(false);
-    }, 8000);
-  });
 
   return (
     <div className="app">
       <ArwesThemeProvider>
         <AnimatorGeneralProvider
           animator={{
-            duration: { enter: 200, exit: 200 },
+            duration: { enter: 500, exit: 500 },
           }}
         >
           <StylesBaseline
@@ -39,7 +34,7 @@ function App() {
             animator={{
               manager: "stagger",
               combine: true,
-              duration: { stagger: 100 },
+              duration: { stagger: 200 },
             }}
           >
             <AppContext.Provider
@@ -48,7 +43,19 @@ function App() {
                 setIsDestroyed,
               }}
             >
-              {isDestroyed ? <Loader /> : loading ? <Loader /> : <MainScreen />}
+              <Router>
+                <Switch>
+                  <Route path="/main">
+                    <MainScreen />
+                  </Route>
+                  <Route path="/destructure">
+                    <Destructure />
+                  </Route>
+                  <Route path="/">
+                    <Loader />
+                  </Route>
+                </Switch>
+              </Router>
             </AppContext.Provider>
           </Animator>
         </AnimatorGeneralProvider>
