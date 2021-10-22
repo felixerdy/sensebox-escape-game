@@ -4,6 +4,7 @@ import { useEffect, useState, createContext } from "react";
 import { ArwesThemeProvider, StylesBaseline } from "@arwes/core";
 import { Animator, AnimatorGeneralProvider } from "@arwes/animation";
 import { Loader } from "./components/Loader";
+import { Lock } from "./components/Lock";
 import { Destructure } from "./components/Destructure";
 import MainScreen from "./components/MainScreen";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -51,8 +52,11 @@ function App() {
                   <Route path="/destructure">
                     <Destructure />
                   </Route>
-                  <Route path="/">
+                  <Route path="/loader">
                     <Loader />
+                  </Route>
+                  <Route path="/">
+                    <Lock />
                   </Route>
                 </Switch>
               </Router>
