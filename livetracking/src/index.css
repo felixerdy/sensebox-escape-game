@@ -17,3 +17,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.react-chatbot-kit-chat-container {
+  width: 100% !important;
+  height: 100%;
+}
+
+.react-chatbot-kit-chat-inner-container {
+  height: 100% !important;
+}
+.react-chatbot-kit-chat-message-container {
+  height: calc(100% - 91px) !important;
+}

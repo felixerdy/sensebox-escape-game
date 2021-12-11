@@ -1,5 +1,5 @@
 class MessageParser {
-  SUPERSECRETPASSWORD = "password";
+  SUPERSECRETPASSWORD = "beleza";
 
   constructor(actionProvider) {
     this.actionProvider = actionProvider;

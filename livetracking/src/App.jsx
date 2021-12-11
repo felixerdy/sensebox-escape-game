@@ -24,9 +24,9 @@ const StyledTrackingInfoCard = styled.div`
 export const AppContext = React.createContext();
 
 function App() {
-  const [modalOpen, setModalOpen] = useState(true);
+  const [modalOpen, setModalOpen] = useState(false);
   const [loginModalOpen, setLoginModalOpen] = useState(false);
-  const [showMap, setShowMap] = useState(false);
+  const [showMap, setShowMap] = useState(true);
 
   return (
     <>

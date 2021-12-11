@@ -26,9 +26,7 @@ class ActionProvider {
   };
 
   absenderinformationen = () => {
-    const message = this.createChatBotMessage(
-      `Absender: IG: @sensebox, Columbia, https://www.sensebox.com.co/`
-    );
+    const message = this.createChatBotMessage(`Absender: 🇨🇴 Beauty 🇨🇴`);
 
     this.updateChatbotState(message);
 
@@ -52,23 +50,35 @@ class ActionProvider {
 
   askForPassword = () => {
     const message = this.createChatBotMessage(
-      "Bitte geben Sie das Kennwort ein um die Notiz zu lesen"
+      "Bitte geben Sie das Kennwort ein um die Notiz zu lesen."
     );
-
     this.updateChatbotState(message);
+    const passwordMessage = this.createChatBotMessage(
+      "Falls Sie kein Kennwort erhalten haben, senden Sie eine E-Mail mit dem Betreff (SBX007) an admin@ranzen.tech"
+    );
+    this.updateChatbotState(passwordMessage);
   };
 
   showNote = () => {
     const message = this.createChatBotMessage(
       `Hello underbernd, I'm happy that we can make some serious business here. 
       I urgently need to do money laudery with my income from the make-up boxes 🤑🤑🤑  
-      Production of senseBox is already running at full speed. 
-      You can also log in to the admin panel if you want.
-      You can find the password on my tshirt in my Instagram post on may 20 2021
-      xoxo sensebox columbia ❤️❤️`
+      Production of senseBox christmas edition is already running at full speed.`
     );
 
     this.updateChatbotState(message);
+
+    const messagee = this.createChatBotMessage(
+      `You can also log in to the admin panel (https://admin.ranzen.tech/) if you want.
+      You can find the password on my tshirt in my Instagram post on may 20 2021.
+      The 4 digit 2FA code is located on opensensemap.org`
+    );
+
+    this.updateChatbotState(messagee);
+
+    const messageee = this.createChatBotMessage(`xoxo @sensebox 🇨🇴 ❤️❤️`);
+
+    this.updateChatbotState(messageee);
   };
 
   updateChatbotState(message) {

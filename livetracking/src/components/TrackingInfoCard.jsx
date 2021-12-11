@@ -32,7 +32,7 @@ const TrackingInfoCard = () => {
             ↓
           </Typography>
           <Typography sx={{ fontSize: 16 }} color="text.primary" gutterBottom>
-            Carl-Neuendorff-Weg, Münster, Germany
+            Münster, Germany
           </Typography>
           <Typography sx={{ mb: 1.5 }} color="text.secondary">
             Ankunft: in zwei Tagen

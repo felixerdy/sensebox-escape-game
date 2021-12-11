@@ -9,12 +9,16 @@ const geojson = {
   properties: {},
   geometry: {
     type: "LineString",
-    coordinates: [
-      [-74.728585, 5.928071],
-      [-79.529245, 8.965607],
-      rotterdam,
-      [7.543431, 51.99356],
-    ],
+    coordinates: [[-74.728585, 5.928071], [-79.529245, 8.965607], rotterdam],
+  },
+};
+
+const plannedGeojson = {
+  type: "Feature",
+  properties: {},
+  geometry: {
+    type: "LineString",
+    coordinates: [rotterdam, [7.543431, 51.99356]],
   },
 };
 
@@ -29,6 +33,21 @@ const layerStyle = {
   paint: {
     "line-color": "#2566f1",
     "line-width": 8,
+  },
+};
+
+const plannedLayerStyle = {
+  id: "route-planned",
+  type: "line",
+  source: "route",
+  layout: {
+    "line-join": "round",
+    "line-cap": "round",
+  },
+  paint: {
+    "line-color": "#2566f1",
+    "line-width": 6,
+    "line-dasharray": [2, 4],
   },
 };
 
@@ -73,6 +92,9 @@ const Map = () => {
           </Marker>
           <Source id="my-data" type="geojson" data={geojson}>
             <Layer {...layerStyle} />
+          </Source>
+          <Source id="my-data-planned" type="geojson" data={plannedGeojson}>
+            <Layer {...plannedLayerStyle} />
           </Source>
         </>
       )}
